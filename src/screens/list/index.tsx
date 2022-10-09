@@ -20,7 +20,12 @@ export interface IListItem {
 const ListScreen = () => {
   return (
     <SafeAreaView edges={['top', 'bottom']}>
-      <ScrollView contentContainerStyle={{paddingHorizontal: 16}}>
+      <ScrollView contentContainerStyle={{paddingHorizontal: 16}}
+      ref={ref => (this.scrollView = ref)} 
+      onContentSizeChange={(contentWidth, contentHeight) => {
+        this.scrollView.scrollToEnd({ animated: true });
+      }}
+      >
         {ListData.map(item => <ListItem key={item.id} item={item} />)}
       </ScrollView>
     </SafeAreaView>
