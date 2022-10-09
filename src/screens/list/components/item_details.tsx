@@ -5,13 +5,13 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import styled from '@emotion/native';
 
 import {faker} from '@faker-js/faker';
-import {RootStackParamList} from './stack';
-import {getImage} from './utils/image';
-import {Container} from './components/container';
-import {Typography} from './components/typography';
-import {DetailsLine} from './components/details-line';
-import {DetailsTitle} from './components/details-title';
-import {Cart} from './components/cart';
+import {RootStackParamList} from '../../../stack';
+import {getImage} from '../../../utils/image';
+import {Container} from '../../../components/container';
+import {Typography} from '../../../components/typography';
+import {DetailsLine} from '../../../components/details-line';
+import {DetailsTitle} from '../../../components/details-title';
+import {Cart} from '../../../components/cart';
 
 //
 //
