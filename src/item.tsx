@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Dimensions, ScrollView, Text, View} from 'react-native';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -36,9 +36,11 @@ export const Item = () => {
     return <Typography>Loading ...</Typography>;
   }
 
-  nav.setOptions({
-    title: params.name,
-  });
+  useEffect(() => {
+    nav.setOptions({
+      title: params.name === '' ? 'Items' : params.name,
+    });
+  }, [nav, params.name]);
 
   //
   //
